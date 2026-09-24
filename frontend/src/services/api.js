@@ -6,9 +6,7 @@
 
 // Candidate backend URLs in priority order
 const BACKEND_URLS = [
-  '/api', // Vite proxy to FastAPI
-  'http://127.0.0.1:8000', // Localhost IPv4
-  'http://localhost:8000', // Localhost hostname
+  import.meta.env.VITE_BACKEND_BASE || 'http://127.0.0.1:8000',
 ];
 
 // Exact weights & scaling from cardio_model.pkl (Scikit-Learn Pipeline)
